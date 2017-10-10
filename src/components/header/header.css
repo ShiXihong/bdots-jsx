@@ -1,0 +1,23 @@
+.bdots-web .header {
+  background-color: #f8f8f8;
+  border-bottom: 1px #00bcd4 solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  .bdots-web .header .header-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch; }
+  .bdots-web .header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .bdots-web .header ul li {
+      float: left;
+      padding: 10px; }

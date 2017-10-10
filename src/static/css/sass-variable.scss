@@ -1,0 +1,37 @@
+$prefix: bdots-web;
+
+$font-size-14: 14px;
+
+$link-hover-color: rgb(0, 188, 212);
+$link-color: rgb(51, 51, 51);
+
+$header-border-bottom-color: rgb(0, 188, 212);
+$header-bg-color: #f8f8f8;
+
+$footer-bg-color: #f8f8f8;
+$footer-border-top-color: rgb(0, 188, 212);
+$footer-border-top-color-2: #333;
+$footer-font-size: 0.75rem;
+
+$max-width: 80rem;
+
+$header-1-color: rgb(0, 188, 212);
+$header-1-font-size: 1.2rem;
+
+@mixin display-flex($flex-direction, $flex-wrap,  $justify-content, $align-items, $align-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content:$align-content;
+}
+
+@mixin border-radios($border-radios){
+  border-radius: $border-radios;
+}
+
+@mixin header1() {
+  color: $header-1-color;
+  font-size: $header-1-font-size;
+}

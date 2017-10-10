@@ -1,0 +1,35 @@
+{
+  "name": "bdots-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "material-ui": "^0.19.0",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^16.0.0",
+    "react-intl": "^2.3.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-form": "^7.0.3",
+    "redux-form-material-ui": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.15.6"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.0",
+    "react-scripts": "1.0.14"
+  }
+}

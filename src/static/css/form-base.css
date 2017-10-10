@@ -1,0 +1,47 @@
+.bdots-web .form-base {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  width: 100%;
+  max-width: 30rem;
+  flex: 1; }
+  .bdots-web .form-base form {
+    width: 100%; }
+  .bdots-web .form-base .form-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px #E0E0E0 solid;
+    font-size: 1.2rem;
+    color: #00bcd4; }
+  .bdots-web .form-base .form-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    margin-top: 20px; }
+  .bdots-web .form-base .verification {
+    position: relative; }
+    .bdots-web .form-base .verification div.verification_code {
+      width: 150px;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 15px; }
+  .bdots-web .form-base .error-info {
+    font-size: 0.75rem;
+    color: red; }
+
+@media (min-width: 1200px) {
+  .bdots-web .form-base {
+    min-width: 400px; } }

@@ -1,0 +1,52 @@
+.bdots-web .other-login-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start; }
+  .bdots-web .other-login-content .other-login-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    margin-top: 20px; }
+    .bdots-web .other-login-content .other-login-line span:first-child,
+    .bdots-web .other-login-content .other-login-line span:last-child {
+      height: 1px;
+      background-color: #eee;
+      flex: 1; }
+    .bdots-web .other-login-content .other-login-line span.text {
+      padding: 0 10px;
+      font-size: 0.5em; }
+  .bdots-web .other-login-content .other-login-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start; }
+    .bdots-web .other-login-content .other-login-item a {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: #e6e6e6;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start;
+      margin: 10px 15px; }
+      .bdots-web .other-login-content .other-login-item a span {
+        color: #00cacf;
+        font-size: 1.8em; }
+      .bdots-web .other-login-content .other-login-item a:hover {
+        background-color: #00bcd4; }
+        .bdots-web .other-login-content .other-login-item a:hover span {
+          color: #fff; }

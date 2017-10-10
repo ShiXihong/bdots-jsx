@@ -1,0 +1,16 @@
+@import "../../static/css/sass-variable.scss";
+
+.#{$prefix}.app{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+
+  .content{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 60px 10px 10px 10px;
+    flex: 1;
+    @include display-flex(column, nowrap, center, stretch, stretch);
+  }
+}

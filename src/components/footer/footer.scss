@@ -1,0 +1,53 @@
+@import "../../static/css/sass-variable.scss";
+
+.#{$prefix} .footer{
+  background-color: $footer-bg-color;
+  border-top: 1px $footer-border-top-color solid;
+  width: 100%;
+
+  .footer-content{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    ul, p{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    p,li,a{
+      font-size: $footer-font-size;
+      line-height: 20px;
+    }
+
+    h1{
+      @include header1;
+    }
+
+    .footer-content-links{
+      @include display-flex(row, wrap, space-between, stretch, stretch);
+      width: 100%;
+    }
+
+    .footer-content-copyright{
+      @include display-flex(row, wrap, space-between, stretch, stretch);
+      width: 100%;
+      border-top: 1px $footer-border-top-color-2 solid;
+      margin: 10px 0;
+      padding-top: 10px;
+
+      ul{
+        @include display-flex(row, wrap, flex-start, stretch, stretch);
+
+        li{
+          padding-right: 20px;
+        }
+
+
+      }
+    }
+
+
+  }
+}

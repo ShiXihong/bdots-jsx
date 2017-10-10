@@ -1,0 +1,33 @@
+const zh_CN = {
+    'Register': '注册',
+    'ToRegister': '还没有账号?去注册',
+    'Login': '亲，请登录',
+    'LoginBtn': '登录',
+    'Logging': '正在登录...',
+    'Logout': '退出',
+    'Welcome': '欢迎您, { name }',
+    'Profile': '个人中心',
+    'Demo': '案例',
+    'Home': '首页',
+    'Forum': '论坛',
+    'Blog': '博客',
+    'Collect': '收藏本站',
+    'Account': '账号',
+    'WelcomeBank': '登录之后更加精彩',
+    'PleaseEnterAccount': '请输入邮箱/手机号码/个性账号',
+    'AccountCantBlank': '请输入您的登录账号',
+    'Password': '密码',
+    'ConfirmPassword':'确认密码',
+    'ForgetPassword': '忘记密码？',
+    'PleaseEnterPassword': '请输入6-20位任意字符',
+    'PleaseEnterConfirmPassword':'请再次输入您的密码',
+    'ConfirmPasswordError': '密码和确认密码不一致',
+    'PasswordCantBlank': '请输入您的密码',
+    'VerificationCode': '验证码',
+    'PleaseEnterVerificationCode': '请输入图形验证码',
+    'VerificationCodeCantBlank': '验证码不能为空',
+    'Submit': '提交',
+    'ToLogin':'已有账号?去登录'
+};
+
+export default zh_CN;

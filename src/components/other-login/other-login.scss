@@ -1,0 +1,52 @@
+@import "../../static/css/sass-variable.scss";
+
+.#{$prefix} .other-login-content {
+  width: 100%;
+  @include display-flex(row, wrap, space-between, center, flex-start);
+
+  .other-login-line {
+    @include display-flex(row, wrap, space-between, center, flex-start);
+    width: 100%;
+    margin-top: 20px;
+
+    span:first-child,
+    span:last-child {
+      height: 1px;
+      background-color: #eee;
+      flex: 1;
+    }
+
+    span.text {
+      padding: 0 10px;
+      font-size: 0.5em;
+    }
+
+  }
+
+  .other-login-item {
+    width: 100%;
+    @include display-flex(row, wrap, center, center, flex-start);
+
+    a {
+      @include border-radios(50%);
+      width: 40px;
+      height: 40px;
+      background-color: #e6e6e6;
+      @include display-flex(row, wrap, center, center, flex-start);
+      margin: 10px 15px;
+
+      span {
+        color: #00cacf;
+        font-size: 1.8em;
+      }
+
+      &:hover {
+        background-color: rgb(0,188,212);
+        span {
+          color: #fff
+        }
+      ;
+      }
+    }
+  }
+}

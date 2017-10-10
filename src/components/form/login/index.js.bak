@@ -1,0 +1,119 @@
+import React, {Component} from 'react';
+import {withRouter, Link} from 'react-router-dom';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {injectIntl, FormattedMessage} from 'react-intl';
+import {withStyles} from 'material-ui/styles';
+import {TextField, Button} from 'material-ui';
+import * as actions from '../../../actions/login';
+import {styles} from '../../../utils/material-ui-styles';
+
+import './login.css';
+
+
+class LoginForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            account: "",
+            password: "",
+            accountError: false,
+            passwordError: false
+        };
+    }
+
+    checkAccount = () => {
+        this.state.account.trim().length <= 0
+            ? this.setState({accountError: true})
+            : this.setState({accountError: false});
+
+
+    };
+
+    checkPassword = () => {
+        this.state.password.trim().length <= 0
+            ? this.setState({passwordError: true})
+            : this.setState({passwordError: false});
+    };
+
+    handleChange = (key, event) => {
+        this.setState({
+            [key]: event.target.value
+        })
+    };
+
+    handleSubmit = () => {
+        this.checkAccount();
+        this.checkPassword();
+        this.state.password.trim().length > 0 && this.state.password.trim().length > 0
+            ? this.props.actions.submitData(this.state)
+            : "";
+    };
+
+    render() {
+        const {intl, classes, state, history} = this.props;
+
+
+        return (
+            <div className="login-form">
+                <TextField
+                    id="password"
+                    label={intl.formatMessage({id: "Account"})}
+                    InputProps={{placeholder: intl.formatMessage({id: "PleaseEnterAccount"})}}
+                    type="text"
+                    labelClassName={classes.label}
+                    fullWidth
+                    autoComplete="current-username"
+                    margin="normal"
+                    helperText={this.state.accountError ? intl.formatMessage({id: "AccountCantBlank"}) : ""}
+                    error={this.state.accountError}
+                    onChange={this.handleChange.bind(this, 'account')}
+                    onBlur={this.checkAccount}
+                />
+                <TextField
+                    id="account"
+                    label={intl.formatMessage({id: "Password"})}
+                    InputProps={{placeholder: intl.formatMessage({id: "PleaseEnterPassword"})}}
+                    type="password"
+                    labelClassName={classes.label}
+                    fullWidth
+                    autoComplete="current-password"
+                    margin="normal"
+                    helperText={this.state.passwordError ? intl.formatMessage({id: "PasswordCantBlank"}) : ""}
+                    error={this.state.passwordError}
+                    onChange={this.handleChange.bind(this, 'password')}
+                    onBlur={this.checkPassword}
+                />
+                <Button raised color="primary" className={classes.button} type="submit"
+                        disabled={true}
+                        onClick={this.handleSubmit.bind(this)}>
+                    <FormattedMessage id="LoginBtn"/>
+                </Button>
+                <div className="forget-password">
+                    <Link to="/register"><FormattedMessage id="ToRegister"/></Link>
+                    <Link to="/forget-password"><FormattedMessage id="ForgetPassword"/></Link>
+                </div>
+                <div className="other-login-line">
+                    <span>&nbsp;</span>
+                    <span className="text">或</span>
+                    <span>&nbsp;</span>
+                </div>
+                <div className="other-login">
+                    <a href="/"><span className="fa fa-qq"></span></a>
+                    <a href="/"><span className="fa fa-wechat"></span></a>
+                </div>
+            </div>
+        );
+    }
+    ;
+}
+
+const oStyleC = withStyles(styles)(LoginForm);
+const oIntlC = injectIntl(oStyleC);
+const oConnectC = connect(state => ({
+        state: state.login
+    }),
+    dispatch => ({
+        actions: bindActionCreators(actions, dispatch)
+    }))(oIntlC);
+export default withRouter(oConnectC);
