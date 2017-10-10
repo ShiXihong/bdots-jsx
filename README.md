@@ -1,5 +1,5 @@
 # bdots-jsx
-my blog site with react jsx
+my blog site with react and jsx
 
 base create-react-app
 
